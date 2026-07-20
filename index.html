@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CALCULATOR</h1>
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="toggleMenu()">HOME</a></li>
+                <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>Grade Calculator</h2>
+                <button onclick="calculate()">Calculate</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Mark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>English</td>
+                            <td id="English"></td>
+                        </tr>
+                        <tr>
+                            <td>Second language</td>
+                            <td id="second-languge"></td>
+                        </tr>
+                        <tr>
+                            <td>Mathematics</td>
+                            <td id="Mathematics"></td>
+                        </tr>
+                        <tr>
+                            <td>Science</td>
+                            <td id="Science"></td>
+                        </tr>
+                        <tr>
+                            <td>Social Science</td>
+                            <td id="Social-science"></td>
+                        </tr>
+                        <tr>
+                            <td class="table-spl-text">Total</td>
+                            <td id="total" class="table-spl-text"></td>
+                        </tr>
+                        <tr>
+                            <td class="table-spl-text">Average</td>
+                            <td id="average" class="table-spl-text"></td>
+                        </tr>
+                        <tr>
+                            <td class="table-spl-text">Grade</td>
+                            <td id="grade" class="table-spl-text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-wrapper">
+                <div class="about-container">
+                    <h1>About This Project</h1>
+                    <p>This Grade Calculator is a web-based tool designed to help students quickly compute their
+                        academic performance.</p>
+                    <h2>How It Works</h2>
+                    <p>The application uses JavaScript logic to process user input through conditional statements.</p>
+                    <h2>Objective</h2>
+                    <p class="Objective-p-tag">This project demonstrates:</p>
+                    <ul class="Objective-ul-tag">
+                        <li>JavaScript prompt and alert handling.</li>
+                        <li>Conditional (if-else) logic.</li>
+                        <li>CSS styling for a clean, responsive user interface.</li>
+                    </ul>
+                </div>
+                <div class="img-container">
+                    <img src="./images/img 1.png" alt="Grade Calculator Illustration">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>CONTACT US</h1>
+            <form action="" class="custom-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Vishnu. All rights reserved.</p>
+            <p>Built for academic excellence.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

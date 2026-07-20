@@ -1,0 +1,333 @@
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Header & Layout --- */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(227, 220, 211);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    letter-spacing: 2px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+header a:hover {
+    color: rgb(192, 180, 180);
+}
+
+/* --- Hamburger Menu Component --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Home Section --- */
+#home {
+    background-color: rgb(192, 180, 180);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+}
+
+#home h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#home .container {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+#home .container button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+#home .container button:hover {
+    background-color: #0069d9;
+}
+
+/* --- Table Component --- */
+table {
+    width: 100%;
+    margin: 20px auto 0 auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(227, 220, 211);
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.table-spl-text{
+    font-weight: bold;
+}
+
+/* --- About Section --- */
+.about {
+    padding: 90px 20px;
+    background-color: rgb(227, 220, 211);
+}
+
+.about .about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.about .about-container {
+    flex: 1;
+    max-width: 100%;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.about .about-container h1,
+.about .about-container h2 {
+    margin-bottom: 10px;
+}
+
+.about .about-container p {
+    margin-bottom: 30px;
+}
+
+.about .about-container .Objective-p-tag {
+    margin-bottom: 0px;
+}
+
+.about .about-container .Objective-ul-tag {
+    margin-left: 40px;
+}
+
+.about .img-container {
+    flex: 1;
+    max-width: 100%;
+}
+
+.about .img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* --- Contact Section --- */
+#contact {
+    background-color: rgb(192, 180, 180);
+    padding: 90px 20px;
+}
+
+#contact h1 {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.custom-form {
+    background-color: rgb(227, 220, 211);
+    color: black;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.custom-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.custom-form input,
+.custom-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    border: 1px solid rgb(192, 180, 180);
+    border-radius: 0.3rem;
+    outline: none;
+    background-color: rgb(192, 180, 180);
+}
+
+.custom-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.custom-form button:hover {
+    background-color: #0069d9;
+}
+
+/* --- Footer --- */
+.footer-container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgb(227, 220, 211);
+    letter-spacing: 1px;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    header {
+        position: sticky;
+        top: 0;
+        /* Make header relative context so the absolute hamburger icon aligns to the header box */
+        position: relative; 
+        justify-content: flex-start;
+        padding: 1.5rem 2rem;
+    }
+
+    header h1 {
+        letter-spacing: 0px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px; /* Forces icon to the right side edge */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    header ul.nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: fixed;
+        top: 77px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 77px);
+        background-color: rgb(227, 220, 211);
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.1, 0.8, 0.3, 1);
+    }
+
+    header ul.nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .about .about-wrapper {
+        flex-direction: column;
+    }
+
+    .about .about-container,
+    .about .img-container {
+        width: 100%;
+    }
+}
