@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* --- Header & Layout --- */
 header {
     display: flex;
@@ -66,7 +70,7 @@ header a:hover {
     align-items: center;
     display: flex;
     min-height: calc(100vh - 80px);
-    padding: 40px 20px;
+    padding: 8px 20px 10px 20px;
 }
 
 #home h2 {
@@ -102,7 +106,7 @@ header a:hover {
 /* --- Table Component --- */
 table {
     width: 100%;
-    margin: 20px auto 0 auto;
+    margin: 8px auto 0 auto;
     border-collapse: collapse;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -144,7 +148,7 @@ td:nth-child(2) {
     font-variant-numeric: tabular-nums;
 }
 
-.table-spl-text{
+.table-spl-text {
     font-weight: bold;
 }
 
@@ -243,7 +247,7 @@ td:nth-child(2) {
     background-color: rgb(192, 180, 180);
 }
 
-.custom-form button {
+.custom-form a {
     width: 100%;
     padding: 1rem;
     font-size: 1.25rem;
@@ -267,13 +271,73 @@ td:nth-child(2) {
     letter-spacing: 1px;
 }
 
+/* thankyou page */
+.thank-you-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(227, 220, 211);
+    font-family: 'Inter', sans-serif;
+    color: ;
+    padding: 2rem;
+}
+
+.thank-you-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.thank-you-card {
+    background-color: rgb(192, 180, 180);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #3b82f6;
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-card h1 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.thank-you-card p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.thank-you-card a{
+    text-decoration: none;
+    color: black;
+   background-color: rgb(227, 220, 211);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.thank-you-card a:hover{
+    background-color: rgb(221, 213, 203);
+
+}
+
 /* --- Responsive Media Queries --- */
 @media (max-width: 768px) {
     header {
         position: sticky;
         top: 0;
-        /* Make header relative context so the absolute hamburger icon aligns to the header box */
-        position: relative; 
+        position: relative;
         justify-content: flex-start;
         padding: 1.5rem 2rem;
     }
@@ -285,7 +349,7 @@ td:nth-child(2) {
     .hamburger {
         display: flex;
         position: absolute;
-        right: 20px; /* Forces icon to the right side edge */
+        right: 20px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -323,7 +387,7 @@ td:nth-child(2) {
     }
 
     .about .about-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .about .about-container,
